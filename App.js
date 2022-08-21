@@ -1,18 +1,15 @@
 
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 
-import AppText from './app/components/AppText';
-import MyButton from './app/components/MyButton';
-import ViewImageScreen from './app/screens/ViewImageScreen';
-import WelcomeScreen from './app/screens/WelcomeScreen';
+
+import { useState } from 'react';
+import LoginScreen from './app/screens/LoginScreen';
 
 export default function App() {
+  const [isNew, setIsNew] = useState('')
+
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',}}>
-      <MyButton title="Login" onPress={()=> console.warn('Heya')}/>
-    </View>
-    //<ViewImageScreen />
-    //
+    <LoginScreen />
   );
 }
 
